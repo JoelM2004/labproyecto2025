@@ -9,6 +9,8 @@ import 'package:labproyecto2025/src/features/provincia/domain/use_cases/list.dar
 import 'package:labproyecto2025/src/features/provincia/domain/use_cases/load.dart';
 import 'package:labproyecto2025/src/features/provincia/domain/use_cases/save.dart';
 import 'package:labproyecto2025/src/features/provincia/domain/use_cases/update.dart';
+import 'package:labproyecto2025/src/features/usuario/domain/use_cases/login.dart';
+import 'package:labproyecto2025/src/features/usuario/domain/use_cases/logout.dart';
 
 final di = GetIt.instance;
 
@@ -24,4 +26,7 @@ void initUseCases() {
   di.registerLazySingleton(() => SaveLocalidadUseCase(repository: di()));
   di.registerLazySingleton(() => UpdateLocalidadUseCase(repository: di()));
   di.registerLazySingleton(() => ListLocalidadUseCase(repository: di()));
+
+  di.registerLazySingleton(() => LogoutUsuarioUseCase(repository: di()));
+  di.registerLazySingleton(() => LoginUsuarioUseCase(repository: di()));
 }

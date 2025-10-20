@@ -9,6 +9,8 @@ import 'package:labproyecto2025/src/features/provincia/presentation/bloc/list_pr
 import 'package:labproyecto2025/src/features/provincia/presentation/bloc/load_provincia/load_provincia_bloc.dart';
 import 'package:labproyecto2025/src/features/provincia/presentation/bloc/save_provincia/save_provincia_bloc.dart';
 import 'package:labproyecto2025/src/features/provincia/presentation/bloc/update_provincia/update_provincia_bloc.dart';
+import 'package:labproyecto2025/src/features/usuario/presentation/bloc/login_usuario/login_usuario_bloc.dart';
+import 'package:labproyecto2025/src/features/usuario/presentation/bloc/logout_usuario/logout_usuario_bloc.dart';
 
 final di = GetIt.instance;
 
@@ -24,4 +26,7 @@ void initBlocs() {
   di.registerFactory(() => ListLocalidadBloc(di()));
   di.registerFactory(() => SaveLocalidadBloc(di()));
   di.registerFactory(() => UpdateLocalidadBloc(di()));
+
+  di.registerFactory(() => LoginUsuarioBloc(di()));
+  di.registerFactory(() => LogoutUsuarioBloc(di()));
 }
